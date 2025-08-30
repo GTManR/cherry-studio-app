@@ -47,7 +47,7 @@ jobs:
       run: npm install -g @expo/cli
       
     - name: 预构建 Android
-      run: npx expo prebuild -p android --clear
+      run: npx expo prebuild -p android
       
     - name: 创建 local.properties
       run: |
