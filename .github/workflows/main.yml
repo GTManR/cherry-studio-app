@@ -19,7 +19,14 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: '18'
-        cache: 'yarn'
+        
+    - name: 启用 Corepack
+      run: corepack enable
+      
+    - name: 设置 Yarn 版本
+      run: |
+        corepack prepare yarn@4.9.1 --activate
+        yarn --version
         
     - name: 设置 Java 17
       uses: actions/setup-java@v4
@@ -71,7 +78,14 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: '18'
-        cache: 'yarn'
+        
+    - name: 启用 Corepack
+      run: corepack enable
+      
+    - name: 设置 Yarn 版本
+      run: |
+        corepack prepare yarn@4.9.1 --activate
+        yarn --version
         
     - name: 设置 Java 17
       uses: actions/setup-java@v4
